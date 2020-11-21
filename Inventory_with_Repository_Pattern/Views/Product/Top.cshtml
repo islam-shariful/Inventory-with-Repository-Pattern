@@ -9,13 +9,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Top</title>
 </head>
 <body>
     <p>
         @Html.ActionLink("Create New", "Create")
-        |
-        @Html.ActionLink("Top Products", "Top")
     </p>
     <table class="table" border="1">
         <tr>
@@ -51,5 +49,6 @@
     }
     
     </table>
+    @Html.ActionLink("Back","index")
 </body>
 </html>

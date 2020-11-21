@@ -53,5 +53,10 @@ namespace Inventory_with_Repository_Pattern.Controllers
             proRepo.Delete(id);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Top()
+        {
+            return View(proRepo.GetTopProducts(2));
+        }
     }
 }

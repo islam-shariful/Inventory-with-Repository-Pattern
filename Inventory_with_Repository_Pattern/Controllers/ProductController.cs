@@ -1,4 +1,5 @@
-﻿using Inventory_with_Repository_Pattern.Repositories;
+﻿using Inventory_with_Repository_Pattern.Models;
+using Inventory_with_Repository_Pattern.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,19 @@ namespace Inventory_with_Repository_Pattern.Controllers
         public ActionResult Index()
         {
             return View(proRepo.GetAll());
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            CategoryRepository catRepo = new CategoryRepository();
+            ViewData["categories"] = catRepo.GetAll();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Product pro)
+        {
+            proRepo.Insert(pro);
+            return Redirect("index");
         }
     }
 }

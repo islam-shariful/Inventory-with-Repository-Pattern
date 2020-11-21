@@ -42,5 +42,16 @@ namespace Inventory_with_Repository_Pattern.Controllers
             proRepo.Update(pro);
             return RedirectToAction("index");
         }
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            return View(proRepo.Get(id));
+        }
+        [HttpPost,ActionName("Delete")]
+        public ActionResult ConfirmDelete(int id)
+        {
+            proRepo.Delete(id);
+            return RedirectToAction("Index");
+        }
     }
 }

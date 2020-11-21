@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\sharif\Desktop\ASP.NET CLASS\Lab 5.2\Inventory_with_Repository_Pattern\Inventory_with_Repository_Pattern\Models\InventoryModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\sharif\Desktop\ASP.NET CLASS\Lab 5.2\Inventory_with_Repository_Pattern\Inventory_with_Repository_Pattern\Models\InventoryDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

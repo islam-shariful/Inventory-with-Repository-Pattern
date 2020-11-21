@@ -29,5 +29,18 @@ namespace Inventory_with_Repository_Pattern.Controllers
             proRepo.Insert(pro);
             return Redirect("index");
         }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            CategoryRepository catRepo = new CategoryRepository();
+            ViewData["categories"] = catRepo.GetAll();
+            return View(proRepo.Get(id));
+        }
+        [HttpPost]
+        public ActionResult Edit(Product pro)
+        {
+            proRepo.Update(pro);
+            return RedirectToAction("index");
+        }
     }
 }
